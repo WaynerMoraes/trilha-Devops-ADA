@@ -1,0 +1,60 @@
+Configurações globais:
+
+-git config --global user.name "WaynerMoraes"
+-git config --global user.email "wayner.junior1995@gmail.com"
+
+Pegar repositório do github:
+
+Basicamente exitem 2 formas de criar um repositório git, a primeira é criando um novo projeto e a segunda é clonando um repo já existente.
+-git clone https://github.com/Letscode-br/lc-challenges-python.git
+
+-diretorio .git, é onde fica de fato gravado os versionamento.
+
+Iniciar um repo git:
+
+-git init: Inicia o monitoramento do diretorio atual
+
+
+Estados do git:
+
+-Untracked -> Arquivo ainda não está sendo monitorado pelo git
+-Unmodified -> Está sendo monitorado pelo git e pode ter sido commitado, contudo ainda não foi modificado. 
+-Modified -> Arquivo já foi modificado 
+-Staged -> É o estado do versionamento preparado para dar um commit
+
+-git status -> mostra o estado atual do repositório.
+-git add README.md -> Coloca o arquivo para a área de stage
+-git diff -> mostra a diferença das alterações realizadas no arquivo
+-git commit -m "add new title" -> realiza o "commit", ou seja, a gravação das mudanças realizadas no arquivo.
+Ao realizar o commit é criado um ID para caso desejar voltar a versão do commit realizado.
+
+Acompanhamento dos logs:
+
+-git log -> mostra o hitórico dos commits realizado no git
+-git restore -> restaura as mudanças realizadas no código
+-git restore --staged Readme.md -> restaura o arquivo que está no estágio de stagged e volta ele para o estado de modified.
+
+
+Interagindo com repos remotos:
+
+Antes de enviar um projeto para um repositório remoto, é necessario adicionar o repositório remoto ao repositório local
+-git remote --add origin https://github.com/WaynerMoraes/git-digital-course.git -> adiciona o repositório remoto ao rositório local.
+-git remote -> mostra os repositórios remotos adicionados ao repositório local
+-git push https://github.com/WaynerMoraes/git-digital-course.git -> envia o projeto para o repositório remoto.
+
+OBS: É possivel fazer as alterações do projeto diretamente pelo projeto remoto.
+
+OBS2: Se alguma alteração for feita diretamente ao repositório remoto e realizar um git pull, será aplicado as alterações ao repositório remoto sem perguntar se deseja realizar a alteração.
+O ideal é usar o git fetch para verificar as mudanças realizadas no repositório remoto para só depois realizar um git pull.
+
+-git fetch -> Puxa as alterações realizadas a um repositório remoto, sem substituir as modificações do repositório atual. 
+
+
+Conceitos de Branchs:
+
+São ramificações realizadas do projeto atual.
+
+OBS: A branch master(main) é a branch principal do projeto.
+
+
+
